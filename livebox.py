@@ -16,6 +16,8 @@ def V4WanAddress():
         if 'data' in liveBoxWanStatus:
             data = liveBoxWanStatus['data']
             if 'IPAddress' in data:
-                return data['IPAddress']
+                wanIpv4 = data['IPAddress']
+                logger.info("wan ipv4: " + wanIpv4)
+                return wanIpv4
 
     return None 
